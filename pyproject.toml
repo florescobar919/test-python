@@ -1,23 +1,13 @@
-[project]
-name = "first-python-project"
+[tool.poetry]
+name = "reminder"
 version = "0.1.0"
-description = "This is a new project"
-authors = [
-    {name = "ESCF",email = "flor.escobar@elca.ch"}
-]
-readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "click (>=8.2.1,<9.0.0)"
-]
-packages = [
-    { include = "reminder" }
-]
+description = "This is my 1st Python project"
+authors = ["ESCF <flor.escobar@elca.ch>"]
+license = "MIT"
 
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.dependencies]
+python = ">=3.13"
+click = ">=8.2.1,<9.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.4.2"
@@ -25,3 +15,7 @@ black = "^25.1.0"
 flake8 = "^7.3.0"
 pre-commit = "^4.3.0"
 tox = "^4.30.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
