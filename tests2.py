@@ -2,8 +2,6 @@ import reminder as app
 
 from reminder import Task
 
-import pytest
-
 
 def test_find_task():
     task_list = [Task(name="pay rent"), Task(name="pay bills")]
