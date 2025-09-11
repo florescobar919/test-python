@@ -2,11 +2,9 @@ import reminder as app
 
 from reminder import Task
 
-import datetime as dt
 import pytest
-import sys
 
-from sys import version_info, platform
+from sys import version_info
 
 
 @pytest.fixture
@@ -78,8 +76,6 @@ def test_check_date_exception():
         ("pay home", None),
         ("PAY rent", Task(name="pay rent")),
     ])
-    
-
 def test_find_task(test_input, expected):
     task_list = [Task(name="pay rent"), Task(name="pay bills")]
     # assert app._find_task("pay bills", task_list) == Task(name="pay bills")
@@ -92,9 +88,6 @@ def test_find_task(test_input, expected):
 def test_find_task():
     task_list = [Task(name="pay rent"), Task(name="pay bills")]
     assert app._find_task("pay bills", task_list) == Task(name="pay bills")
-    
-
-
 def test_find_task_none():
     task_list = [Task(name="pay rent"), Task(name="pay bills")]
     assert app._find_task("pay home", task_list) is None
